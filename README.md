@@ -58,13 +58,14 @@ Every 30 seconds the miner prints each card's speed, temperature, power and fan 
 
 ## Speeds
 
-Measured on our own cards:
+Measured on our own cards. NEB speeds are what the pool credited (0.2.0, November 2026); they change with each
+NEB model.
 
 | Card | BOUND | NEB |
 |---|---|---|
-| RX 9070 XT | 175 kH/s | 8.5 G/s screened |
-| RTX 4060 (90 W) | 115 kH/s | 3.7 G/s screened |
-| RTX 2060 | 100 kH/s | - |
+| RX 9070 XT | 175 kH/s | ~235 MA/s |
+| RTX 4060 (90 W) | 115 kH/s | not measured yet |
+| RTX 2060 | 100 kH/s | ~118 MA/s (ffgn 1.0.10 in the same test: ~94) |
 
 BOUND speed depends mostly on memory speed: a memory clock locked low (by another miner) slows it down a lot.
 
