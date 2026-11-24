@@ -1,18 +1,22 @@
-# Kobold Miner
+# koboldpool-miner
 
 Kobold Pool's own miner for **BOUND** and **NEB**, on NVIDIA and AMD graphics cards (and the CPU for BOUND).
 **No dev fee.** It mines only on [Kobold Pool](https://koboldpool.com): that is how the pool pays for it.
 
 Download it from the [releases](../../releases) page (Windows and Linux). Only the normal graphics driver is needed.
 
+Not to be confused with "Kobold Miner" by kobold-dev, a separate project not made by Kobold Pool. Download
+koboldpool-miner only from this [releases](../../releases) page or [koboldpool.com](https://koboldpool.com).
+Up to 0.2.0 it was called kobold-miner.
+
 ## Quick start
 
 ```
-kobold-miner --list                                   # the GPUs it finds
-kobold-miner -u YOUR_BOUND_ADDRESS.rig1 -g 0          # BOUND on NVIDIA card 0
-kobold-miner -u YOUR_BOUND_ADDRESS.rig1 -g 0 --opencl # BOUND on AMD card 0
-kobold-miner -u YOUR_BOUND_ADDRESS.rig1 -t 8          # BOUND on 8 CPU threads
-kobold-miner -u YOUR_NEB_ADDRESS.rig1 -g 0,1          # NEB on cards 0 and 1
+koboldpool-miner --list                                   # the GPUs it finds
+koboldpool-miner -u YOUR_BOUND_ADDRESS.rig1 -g 0          # BOUND on NVIDIA card 0
+koboldpool-miner -u YOUR_BOUND_ADDRESS.rig1 -g 0 --opencl # BOUND on AMD card 0
+koboldpool-miner -u YOUR_BOUND_ADDRESS.rig1 -t 8          # BOUND on 8 CPU threads
+koboldpool-miner -u YOUR_NEB_ADDRESS.rig1 -g 0,1          # NEB on cards 0 and 1
 ```
 
 The coin follows from the address (`B...` mines BOUND, `neb1...` mines NEB). `.rig1` is the worker name shown on the
@@ -34,7 +38,7 @@ pool's dashboard.
 | `--cclk MHz`, `--mclk MHz` | NVIDIA: lock the core / memory clock (`0` removes the lock) |
 | `--coff MHz`, `--moff MHz` | NVIDIA: core / memory clock offset |
 
-`kobold-miner --help` shows all options.
+`koboldpool-miner --help` shows all options.
 
 ## Status line
 
@@ -74,7 +78,7 @@ BOUND speed depends mostly on memory speed: a memory clock locked low (by anothe
 - Every share a GPU finds is checked on the CPU before it is sent.
 - The miner needs only your address: no wallet file, no private key.
 - Check the download against `SHA256SUMS` (`sha256sum -c SHA256SUMS` on Linux,
-  `certutil -hashfile kobold-miner.exe SHA256` on Windows).
+  `certutil -hashfile koboldpool-miner.exe SHA256` on Windows).
 
 ## Why only Kobold Pool
 

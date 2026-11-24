@@ -1,17 +1,17 @@
-kobold-miner contains open-source code. This file lists those parts and gives the license texts they ask to be
+koboldpool-miner contains open-source code. This file lists those parts and gives the license texts they ask to be
 shipped with the program. LICENSE-APACHE holds the Apache License 2.0.
 
 1. BoundHash
-   kobold-miner's CPU and GPU BoundHash code follows BOUND's src/core/boundhash.cpp
+   koboldpool-miner's CPU and GPU BoundHash code follows BOUND's src/core/boundhash.cpp
    (https://github.com/Sonic-Bound/Bound, v1.1.0). MIT License, text in section A.
 
 2. NEB
    NEB mining uses the NEB node's crates neb-pow (with its C reference code), neb-work, neb-block, neb-chain,
    neb-codec and neb-difficulty (https://github.com/SilasEigen/neb, v1.0.4), Apache License 2.0 (LICENSE-APACHE).
-   kobold-miner's GPU screening kernel implements NEB's BLAKE3 and ChaCha8 steps from NEB's spec/shares.md.
+   koboldpool-miner's GPU screening kernel implements NEB's BLAKE3 and ChaCha8 steps from NEB's spec/shares.md.
 
 3. Rust crates under the Apache License 2.0 (LICENSE-APACHE)
-   These crates offer a choice of licenses; kobold-miner uses them under the Apache License 2.0:
+   These crates offer a choice of licenses; koboldpool-miner uses them under the Apache License 2.0:
    the Rust standard library, arrayvec, base64ct, blake3, block-buffer, cfg-if, const-oid, constant_time_eq,
    cpufeatures, crypto-common, der, digest, ed25519, getrandom, hybrid-array, itoa, libc, pkcs8, rand_core, serde,
    serde_core, serde_json, sha2, signature, spki, typenum, windows-link, zeroize.
